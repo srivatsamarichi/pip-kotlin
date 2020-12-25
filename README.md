@@ -1,10 +1,9 @@
 ![Codacy Security Scan](https://github.com/srivatsamarichi/pip-kotlin/workflows/Codacy%20Security%20Scan/badge.svg)
 ![CodeQL](https://github.com/srivatsamarichi/pip-kotlin/workflows/CodeQL/badge.svg)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b22f004ffda14b4a80db6f5802e0a9f2)](https://app.codacy.com/gh/srivatsamarichi/pip-kotlin?utm_source=github.com&utm_medium=referral&utm_content=srivatsamarichi/pip-kotlin&utm_campaign=Badge_Grade)
 
 Android PictureInPicture Sample (Kotlin)
 ========================================
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b22f004ffda14b4a80db6f5802e0a9f2)](https://app.codacy.com/gh/srivatsamarichi/pip-kotlin?utm_source=github.com&utm_medium=referral&utm_content=srivatsamarichi/pip-kotlin&utm_campaign=Badge_Grade)
 
 This sample demonstrates basic usage of Picture-in-Picture mode for handheld devices.
 The sample plays a video. The video keeps on playing when the app is turned in to
