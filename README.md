@@ -1,3 +1,6 @@
+![Codacy Security Scan](https://github.com/srivatsamarichi/pip-kotlin/workflows/Codacy%20Security%20Scan/badge.svg)
+![CodeQL](https://github.com/srivatsamarichi/pip-kotlin/workflows/CodeQL/badge.svg)
+
 Android PictureInPicture Sample (Kotlin)
 ========================================
 
@@ -5,6 +8,8 @@ This sample demonstrates basic usage of Picture-in-Picture mode for handheld dev
 The sample plays a video. The video keeps on playing when the app is turned in to
 Picture-in-Picture mode. On Picture-in-Picture screen, the app shows an action item to
 pause or resume the video.
+
+<img src="screenshots/1-main.png" height="400" alt="Screenshot"/> <img src="screenshots/2-pip.png" height="400" alt="Screenshot"/> 
 
 Introduction
 ------------
@@ -46,14 +51,9 @@ item is selected.
 Pre-requisites
 --------------
 
-- Android SDK 26
-- Android Build Tools v26.0.2
+- Android SDK 29
+- Android Build Tools v30.0.3
 - Android Support Repository
-
-Screenshots
--------------
-
-<img src="screenshots/1-main.png" height="400" alt="Screenshot"/> <img src="screenshots/2-pip.png" height="400" alt="Screenshot"/> 
 
 Getting Started
 ---------------
@@ -61,13 +61,3 @@ Getting Started
 This sample uses the Gradle build system. To build this project, use the
 "gradlew build" command or use "Import Project" in Android Studio.
 
-Support
--------
-
-- Stack Overflow: http://stackoverflow.com/questions/tagged/android
-
-If you've found an error in this sample, please file an issue:
-https://github.com/android/media-samples
-
-Patches are encouraged, and may be submitted by forking this project and
-submitting a pull request through GitHub. Please see CONTRIBUTING.md for more details.
