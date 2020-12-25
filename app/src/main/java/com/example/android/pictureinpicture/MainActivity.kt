@@ -27,13 +27,16 @@ import android.content.res.Configuration
 import android.graphics.drawable.Icon
 import android.net.Uri
 import android.os.Bundle
-import androidx.annotation.DrawableRes
-import androidx.appcompat.app.AppCompatActivity
 import android.util.Rational
 import android.view.View
 import android.widget.Button
 import android.widget.ScrollView
+import androidx.annotation.DrawableRes
+import androidx.appcompat.app.AppCompatActivity
 import com.example.android.pictureinpicture.widget.MovieView
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 import java.util.*
 
 
@@ -167,6 +170,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        AppCenter.start(application, "0dcb45ac-a63f-44e9-8636-e7579c76a698",
+                Analytics::class.java, Crashes::class.java)
         // View references
         mMovieView = findViewById(R.id.movie)
         mScrollView = findViewById(R.id.scroll)

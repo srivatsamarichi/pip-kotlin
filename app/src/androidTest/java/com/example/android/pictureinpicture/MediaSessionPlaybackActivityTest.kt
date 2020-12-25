@@ -17,7 +17,8 @@
 package com.example.android.pictureinpicture
 
 import android.content.pm.ActivityInfo
-import androidx.test.platform.app.InstrumentationRegistry
+import android.support.v4.media.session.PlaybackStateCompat
+import android.view.View
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.UiController
 import androidx.test.espresso.ViewAction
@@ -26,11 +27,13 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.rule.ActivityTestRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import android.support.v4.media.session.PlaybackStateCompat
-import android.view.View
+import androidx.test.filters.LargeTest
+import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.rule.ActivityTestRule
 import com.example.android.pictureinpicture.widget.MovieView
+import com.microsoft.appcenter.espresso.Factory
+import com.microsoft.appcenter.espresso.ReportHelper
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.not
@@ -38,16 +41,19 @@ import org.hamcrest.TypeSafeMatcher
 import org.hamcrest.core.AllOf.allOf
 import org.hamcrest.core.Is.`is`
 import org.hamcrest.core.IsEqual.equalTo
+import org.junit.After
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertThat
 import org.junit.Assert.assertTrue
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 
-@RunWith(AndroidJUnit4::class)
+
 class MediaSessionPlaybackActivityTest {
+    @get: Rule var reportHelper: ReportHelper = Factory.getReportHelper()
 
     @Rule @JvmField
     val rule = ActivityTestRule(MediaSessionPlaybackActivity::class.java)
