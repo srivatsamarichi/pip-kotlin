@@ -38,7 +38,7 @@ android {
 
 dependencies {
 
-    def appCenterSdkVersion = '4.0.0'
+    def appCenterSdkVersion = '4.1.0'
     implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 

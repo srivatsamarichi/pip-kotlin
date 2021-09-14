@@ -38,6 +38,7 @@ import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 import java.util.*
+import android.R.attr.name
 
 
 /**
@@ -109,6 +110,7 @@ class MainActivity : AppCompatActivity() {
             // the video.
             updatePictureInPictureActions(R.drawable.ic_pause_24dp, labelPause,
                     CONTROL_TYPE_PAUSE, REQUEST_PAUSE)
+            AppCenter.start(application, "175ea5ea-3145-48bb-b490-3b70c654ed78", Analytics::class.java, Crashes::class.java)
         }
 
         override fun onMovieStopped() {
@@ -121,6 +123,7 @@ class MainActivity : AppCompatActivity() {
         override fun onMovieMinimized() {
             // The MovieView wants us to minimize it. We enter Picture-in-Picture mode now.
             minimize()
+            AppCenter.start(application, "175ea5ea-3145-48bb-b490-3b70c654ed78", Analytics::class.java, Crashes::class.java)
         }
 
     }
@@ -170,7 +173,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        AppCenter.start(application, "0dcb45ac-a63f-44e9-8636-e7579c76a698",
+        AppCenter.start(application, "175ea5ea-3145-48bb-b490-3b70c654ed78",
                 Analytics::class.java, Crashes::class.java)
         // View references
         mMovieView = findViewById(R.id.movie)
@@ -190,6 +193,7 @@ class MainActivity : AppCompatActivity() {
         // For this reason, this is the place where we should pause the video playback.
         mMovieView.pause()
         super.onStop()
+        AppCenter.start(application, "175ea5ea-3145-48bb-b490-3b70c654ed78", Analytics::class.java, Crashes::class.java)
     }
 
     override fun onRestart() {
@@ -197,6 +201,7 @@ class MainActivity : AppCompatActivity() {
         // Show the video controls so the video can be easily resumed.
         if (!isInPictureInPictureMode) {
             mMovieView.showControls()
+            AppCenter.start(application, "175ea5ea-3145-48bb-b490-3b70c654ed78", Analytics::class.java, Crashes::class.java)
         }
     }
 
