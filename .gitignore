@@ -779,3 +779,4 @@ local.properties
 .idea/modules/PictureInPictureKotlin.iml
 .idea/modules/app/PictureInPictureKotlin.app.iml
 gradle/wrapper/gradle-wrapper.properties
+.idea/gradle.xml
